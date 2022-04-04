@@ -1,5 +1,5 @@
 include ../../tasks/Makefile.package
-#include ../../tasks/Makefile.apk
+include ../../tasks/Makefile.apk
 
 # Package details
 export VENDOR ?= hairyhenderson

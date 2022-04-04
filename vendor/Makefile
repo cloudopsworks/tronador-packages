@@ -3,8 +3,8 @@ CURRENT_BRANCH ?=
 BUILD_LIST_TARGET ?= list/all
 
 # ## Install alpine build deps
-# deps:
-# 	apk add alpine-sdk shadow
+deps:
+	apk add alpine-sdk shadow
 
 ## List all packages which have been updated relative to `master`
 list/updated:
@@ -21,10 +21,10 @@ list/all:
 	@find . -mindepth 1 -maxdepth 1 -type d | cut -d/ -f2
 
 # ## Build all updated alpine packages
-# build:
-# 	chmod 777 ../tmp
-# 	$(MAKE) --no-print-directory -s $(BUILD_LIST_TARGET) | \
-# 		xargs -t -n 1 -I{} -- /bin/sh -c 'make --no-print-directory -C {} info apk || exit 255'
+build:
+	chmod 777 ../tmp
+	$(MAKE) --no-print-directory -s $(BUILD_LIST_TARGET) | \
+		xargs -t -n 1 -I{} -- /bin/sh -c 'make --no-print-directory -C {} info apk || exit 255'
 
 ## Update all packages
 update:
