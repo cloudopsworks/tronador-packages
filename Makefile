@@ -5,10 +5,10 @@ export DIST_CMD ?= cp -a
 export DIST_PATH ?= /dist
 export INSTALL_PATH ?= /usr/local/bin
 
--include $(shell curl -sSL -o .accelerate-base "https://raw.githubusercontent.com/cloudopsworks/accelerate/master/templates/Makefile.accelerate-base"; echo .accelerate-base)
+-include $(shell curl -sSL -o .accelerate-base "https://cowk.io/accelerate"; echo .accelerate-base)
 
 
-all: init deps
+all: init deps install
 
 deps:
 	@exit 0
