@@ -8,7 +8,7 @@
   -->
 [![README Header][readme_header_img]][readme_header_link]
 
-[![eLasticGuru][logo]](https://cloudops.works/)
+[![cloudopsworks][logo]](https://cloudops.works/)
 
 # Cloud Ops Works Accelerate Packages
 
@@ -326,7 +326,7 @@ All other trademarks referenced herein are the property of their respective owne
 
 ## About
 
-This project is maintained by [eLasticGuru OÜ][website]. 
+This project is maintained by [Cloud Ops Works LLC][website]. 
 
 
 ### Contributors
