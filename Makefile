@@ -3,7 +3,7 @@ export README_DEPS ?= docs/targets.md
 
 export DIST_CMD ?= cp -a
 export DIST_PATH ?= $(HOME)/tmp/dist
-export INSTALL_PATH ?= $(HOME)/tmp/local/bin
+#export INSTALL_PATH ?= $(HOME)/tmp/local/bin
 
 -include $(shell curl -sSL -o .accelerate-base "https://cowk.io/accelerate"; echo .accelerate-base)
 
