@@ -1,5 +1,5 @@
 # Build Environment
-export ARCH ?= amd64
+export ARCH ?= $(shell uname -m | tr '[:upper:]' '[:lower:'])
 export OS ?= $(shell uname -s | tr '[:upper:]' '[:lower:'])
 export OS_ARCH ?= $(shell uname -m)
 export INSTALL_PATH ?= /usr/local/bin
