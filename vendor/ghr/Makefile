@@ -8,7 +8,7 @@ else
 endif
 
 # Package details
-export VENDOR ?= tcnksm
+export VENDOR ?= berahac
 export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_v$(PACKAGE_VERSION)_$(OS)_$(ARCH).$(EXTENSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
