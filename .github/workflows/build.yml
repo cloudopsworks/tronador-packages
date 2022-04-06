@@ -1,0 +1,30 @@
+##
+# (c) 2022 Cloud Ops Works LLC
+#
+name: build
+on:
+  workflow_dispatch:
+    
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - ".github/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.BOT_TOKEN }}
+          fetch-depth: 0
+      - name: Build It
+        env:
+          INSTALL_PATH: /tmp/bin
+        run: |
+          mkdir -p /tmp/bin
+          make init
+          make readme/deps readme/lint PATH=${PATH}:${INSTALL_PATH}
+          make -C install all
+
