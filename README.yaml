@@ -25,22 +25,22 @@ github_repo: cloudopsworks/tronador-packages
 # Badges to display
 badges:
   - name: "Build Status"
-    image: "https://travis-ci.org/cloudopsworks/tronador.svg?branch=master"
-    url: "https://travis-ci.org/cloudopsworks/tronador"
+    image: "https://github.com/cloudopsworks/tronador-packages/workflows/build/badge.svg?branch=master&event=push"
+    url: "https://github.com/cloudopsworks/tronador-packages/actions/workflows/build.yml"
   - name: "Latest Release"
-    image: "https://img.shields.io/github/release/cloudopsworks/tronador.svg"
-    url: "https://github.com/cloudopsworks/tronador/releases/latest"
+    image: "https://img.shields.io/github/v/release/cloudopsworks/tronador-packages?display_name=tag"
+    url: "https://github.com/cloudopsworks/tronador-packages/releases/latest"
   - name: "Slack Community"
-    image: "https://slack.cloudopsworks.com/badge.svg"
-    url: "https://slack.cloudopsworks.com"
+    image: "https://slack.cloudops.works/badge.svg"
+    url: "https://slack.cloudops.works"
 
 related:
   - name: "Packages"
     description: "Cloud Ops Works installer and distribution of native apps"
     url: "https://github.com/cloudopsworks/tronador"
-  - name: "Dev Harness"
-    description: "Cloud Ops Works Local Development Harness"
-    url: "https://github.com/cloudopsworks/dev"
+  # - name: "Dev Harness"
+  #   description: "Cloud Ops Works Local Development Harness"
+  #   url: "https://github.com/cloudopsworks/dev"
 
 # References
 references:
@@ -112,8 +112,8 @@ usage: |-
 quickstart: |-
   Here's how to get started...
 
-  1. `git clone https://github.com/cloudopsworks/tronador.git` to pull down the repository
-  2. `make init` to initialize the [`tronador`](https://github.com/cloudopsworks/tronador/)
+  1. `git clone https://github.com/cloudopsworks/tronador-packages.git` to pull down the repository
+  2. `make init` to initialize the [`tronador`](https://github.com/cloudopsworks/tronador-packages/)
 
 # Other files to include in this README from the project folder
 include:
