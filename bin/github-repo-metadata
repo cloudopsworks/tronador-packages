@@ -27,9 +27,9 @@ if [ $# -eq 4 ]; then
   fetch "${1}" "${2}" "${3}" "${4}"
 else
   echo "Usage: $0 [org] [repo] [api] [jq path]"
-  echo "  e.g. $0 coudopsworks accelerate license .license.spdx_id"
-  echo "       $0 coudopsworks accelerate releases/latest .tag_name"
-  echo "       $0 coudopsworks accelerate '' .description"
+  echo "  e.g. $0 coudopsworks tronador license .license.spdx_id"
+  echo "       $0 coudopsworks tronador releases/latest .tag_name"
+  echo "       $0 coudopsworks tronador '' .description"
   exit 1
 fi
 
