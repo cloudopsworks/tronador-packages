@@ -12,7 +12,7 @@
 
 # Cloud Ops Works Accelerate Packages
 
- [![Build Status](https://travis-ci.org/cloudopsworks/tronador.svg?branch=master)](https://travis-ci.org/cloudopsworks/tronador) [![Latest Release](https://img.shields.io/github/release/cloudopsworks/tronador.svg)](https://github.com/cloudopsworks/tronador/releases/latest) [![Slack Community](https://slack.cloudopsworks.com/badge.svg)](https://slack.cloudopsworks.com)
+ [![Build Status](https://github.com/cloudopsworks/tronador-packages/workflows/build/badge.svg?branch=master&event=push)](https://github.com/cloudopsworks/tronador-packages/actions/workflows/build.yml) [![Latest Release](https://img.shields.io/github/v/release/cloudopsworks/tronador-packages?display_name=tag)](https://github.com/cloudopsworks/tronador-packages/releases/latest) [![Slack Community](https://slack.cloudops.works/badge.svg)](https://slack.cloudops.works)
 
 
 This `tronador` is a collection of Makefiles to facilitate building Golang projects, Dockerfiles, Helm charts, and more.
@@ -95,8 +95,8 @@ jobs:
 
 Here's how to get started...
 
-1. `git clone https://github.com/cloudopsworks/tronador.git` to pull down the repository
-2. `make init` to initialize the [`tronador`](https://github.com/cloudopsworks/tronador/)
+1. `git clone https://github.com/cloudopsworks/tronador-packages.git` to pull down the repository
+2. `make init` to initialize the [`tronador`](https://github.com/cloudopsworks/tronador-packages/)
 
 
 
@@ -123,7 +123,6 @@ Are you using this project or any of our other projects? Consider [leaving a tes
 Check out these related projects.
 
 - [Packages](https://github.com/cloudopsworks/tronador) - Cloud Ops Works installer and distribution of native apps
-- [Dev Harness](https://github.com/cloudopsworks/dev) - Cloud Ops Works Local Development Harness
 
 
 
