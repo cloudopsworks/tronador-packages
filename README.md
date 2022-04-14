@@ -22,12 +22,12 @@ It's designed to work with CI/CD systems such as GitHub Actions, Codefresh, Trav
 ---
 
 This project is part of our comprehensive approach towards DevOps Acceleration. 
-[<img align="right" title="Share via Email" src="https://docs.cloudops.works/images/ionicons/ios-email-outline-2.0.1-16x16-999999.svg"/>][share_email]
-[<img align="right" title="Share on Google+" src="https://docs.cloudops.works/images/ionicons/social-googleplus-outline-2.0.1-16x16-999999.svg" />][share_googleplus]
-[<img align="right" title="Share on Facebook" src="https://docs.cloudops.works/images/ionicons/social-facebook-outline-2.0.1-16x16-999999.svg" />][share_facebook]
-[<img align="right" title="Share on Reddit" src="https://docs.cloudops.works/images/ionicons/social-reddit-outline-2.0.1-16x16-999999.svg" />][share_reddit]
-[<img align="right" title="Share on LinkedIn" src="https://docs.cloudops.works/images/ionicons/social-linkedin-outline-2.0.1-16x16-999999.svg" />][share_linkedin]
-[<img align="right" title="Share on Twitter" src="https://docs.cloudops.works/images/ionicons/social-twitter-outline-2.0.1-16x16-999999.svg" />][share_twitter]
+[<img align="right" title="Share via Email" width="24" height="24" src="https://docs.cloudops.works/images/ionicons/ios-mail.svg"/>][share_email]
+[<img align="right" title="Share on Google+" width="24" height="24" src="https://docs.cloudops.works/images/ionicons/logo-googleplus.svg" />][share_googleplus]
+[<img align="right" title="Share on Facebook" width="24" height="24" src="https://docs.cloudops.works/images/ionicons/logo-facebook.svg" />][share_facebook]
+[<img align="right" title="Share on Reddit" width="24" height="24" src="https://docs.cloudops.works/images/ionicons/logo-reddit.svg" />][share_reddit]
+[<img align="right" title="Share on LinkedIn" width="24" height="24" src="https://docs.cloudops.works/images/ionicons/logo-linkedin.svg" />][share_linkedin]
+[<img align="right" title="Share on Twitter" width="24" height="24" src="https://docs.cloudops.works/images/ionicons/logo-twitter.svg" />][share_twitter]
 
 
 
@@ -107,6 +107,7 @@ ghr                       0.14.2     Upload multiple artifacts to GitHub Release
 gomplate                  3.10.0     
 terraform                 1.1.7      Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.16.0     Generate docs from terraform modules
+yq                        4.23.1     
 ```
 
 
@@ -216,7 +217,7 @@ This project is maintained by [Cloud Ops Works LLC][website].
 |---|
 
   [berahac_homepage]: https://github.com/berahac
-  [berahac_avatar]: https://img.cloudops.works/150x150/https://github.com/berahac.png
+  [berahac_avatar]: https://github.com/berahac.png?size=50
 
 [![README Footer][readme_footer_img]][readme_footer_link]
 [![Beacon][beacon]][website]
@@ -249,4 +250,4 @@ This project is maintained by [Cloud Ops Works LLC][website].
   [share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/cloudopsworks/tronador-packages
   [share_googleplus]: https://plus.google.com/share?url=https://github.com/cloudopsworks/tronador-packages
   [share_email]: mailto:?subject=Cloud+Ops+Works+Accelerate+Packages&body=https://github.com/cloudopsworks/tronador-packages
-  [beacon]: https://ga-beacon.cloudops.works/UA-76589703-4/cloudopsworks/tronador-packages?pixel&cs=github&cm=readme&an=tronador-packages
+  [beacon]: https://ga-beacon.cloudops.works/G-7XWMFVFXZT/cloudopsworks/tronador-packages?pixel&cs=github&cm=readme&an=tronador-packages
