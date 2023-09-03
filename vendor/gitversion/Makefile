@@ -10,13 +10,19 @@ EXTENSION=tar.gz
 
 # Package details
 export VENDOR ?= gittools
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(OS_TEXT)-$(ARCH)-$(PACKAGE_VERSION).$(EXTENSION)
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(OS_TEXT)-$(ARCH)-$(PACKAGE_VERSION).$(EXTENSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
-install:
+install: install-$(OS)
+	@exit 0
+
+install-darwin:
+	$(CURL) -o - $(DOWNLOAD_URL) | tar -zxO gitversion > $(INSTALL_PATH)/gitversion
+	chmod +x $(INSTALL_PATH)/gitversion
+
+install-linux:
 	$(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO */gitversion > $(INSTALL_PATH)/gitversion
 	chmod +x $(INSTALL_PATH)/gitversion
-	@exit 0
 
 test:
 	$(PACKAGE_EXE) --version
