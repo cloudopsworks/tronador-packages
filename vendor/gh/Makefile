@@ -2,15 +2,17 @@ include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
 ifeq ($(OS), darwin)
+	OS_TEXT=macOS
 	EXTENSION=zip
 else
- 	EXTENSION=tar.gz
+	OS_TEXT=linux
+	EXTENSION=tar.gz
 endif
 
 # Package details
 export PACKAGE_REPO_URL=https://github.com/cli/cli
 export VENDOR ?= cli
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_v$(PACKAGE_VERSION)_$(OS)_$(ARCH).$(EXTENSION)
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_v$(PACKAGE_VERSION)_$(OS_TEXT)_$(ARCH).$(EXTENSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install: install-$(OS)
