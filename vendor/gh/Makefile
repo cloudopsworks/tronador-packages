@@ -4,11 +4,12 @@ include ../../tasks/Makefile.apk
 ifeq ($(OS), darwin)
 	EXTENSION=zip
 else
-	EXTENSION=tar.gz
+ 	EXTENSION=tar.gz
 endif
 
 # Package details
-export VENDOR ?= berahac
+export PACKAGE_REPO_URL=https://github.com/cli/cli
+export VENDOR ?= cli
 export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_v$(PACKAGE_VERSION)_$(OS)_$(ARCH).$(EXTENSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
