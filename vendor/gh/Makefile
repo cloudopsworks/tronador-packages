@@ -17,17 +17,17 @@ install: install-$(OS)
 	@exit 0
 
 install-darwin:
-	$(CURL) -o - $(DOWNLOAD_URL) > $(INSTALL_PATH)/ghr.zip
-	unzip -p $(INSTALL_PATH)/ghr.zip */ghr > $(INSTALL_PATH)/ghr
-	rm $(INSTALL_PATH)/ghr.zip
-	chmod +x $(INSTALL_PATH)/ghr
+	$(CURL) -o - $(DOWNLOAD_URL) > $(INSTALL_PATH)/gh.zip
+	unzip -p $(INSTALL_PATH)/gh.zip */gh > $(INSTALL_PATH)/gh
+	rm $(INSTALL_PATH)/gh.zip
+	chmod +x $(INSTALL_PATH)/gh
 
 install-linux:
-	$(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO */ghr > $(INSTALL_PATH)/ghr
-	chmod +x $(INSTALL_PATH)/ghr
+	$(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO */gh > $(INSTALL_PATH)/gh
+	chmod +x $(INSTALL_PATH)/gh
 
 test:
 	$(PACKAGE_EXE) --version
 
 package/prepare::
-	mv src/ghr_v$(PACKAGE_VERSION)_$(OS)_$(ARCH)/$(PACKAGE_EXE) src
+	mv src/gh_v$(PACKAGE_VERSION)_$(OS)_$(ARCH)/$(PACKAGE_EXE) src
