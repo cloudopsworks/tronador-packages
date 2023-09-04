@@ -103,9 +103,11 @@ Here's how to get started...
 
 ## Makefile Targets
 ```
+gh                        2.33.0     
 ghr                       0.14.2     Upload multiple artifacts to GitHub Releases in parallel
+gitversion                6.0.0-beta.3 GitVersion Tool - from log to SemVer
 gomplate                  3.10.0     
-terraform                 1.1.7      Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
+terraform                 1.3.3      Terraform is a tool for building, changing, and combining infrastructure safely and efficiently.
 terraform-docs            0.16.0     Generate docs from terraform modules
 yq                        4.23.1     
 ```
@@ -165,7 +167,7 @@ Please use the [issue tracker](https://github.com/cloudopsworks/tronador-package
 
 ## Copyrights
 
-Copyright © 2021-2022 [Cloud ops Works LLC](https://cloudops.works)
+Copyright © 2021-2023 [Cloud ops Works LLC](https://cloudops.works)
 
 
 
