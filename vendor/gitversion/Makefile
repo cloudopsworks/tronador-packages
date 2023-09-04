@@ -5,6 +5,7 @@ ifeq ($(OS), darwin)
 	OS_TEXT=osx
 else
 	OS_TEXT=$(OS)
+	ARCH=x64
 endif
 EXTENSION=tar.gz
 
