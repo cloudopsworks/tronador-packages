@@ -22,7 +22,7 @@ install-darwin:
 	chmod +x $(INSTALL_PATH)/gitversion
 
 install-linux:
-	$(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO */gitversion > $(INSTALL_PATH)/gitversion
+	$(CURL) -o - $(DOWNLOAD_URL) | tar -zxO gitversion > $(INSTALL_PATH)/gitversion
 	chmod +x $(INSTALL_PATH)/gitversion
 
 test:
