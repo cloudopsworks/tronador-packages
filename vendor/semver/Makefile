@@ -6,7 +6,7 @@ export VENDOR ?= cloudopsworks
 export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(OS)_$(ARCH)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
-install: install-$(OS)
+install:
 	$(CURL) -o - $(DOWNLOAD_URL) > $(INSTALL_PATH)/semver
 	chmod +x $(INSTALL_PATH)/semver
 	@exit 0
