@@ -19,14 +19,14 @@ install: install-$(OS)
 	@exit 0
 
 install-darwin:
-	$(CURL) -o - $(DOWNLOAD_URL) > $(INSTALL_PATH)/gh.zip
-	unzip -p $(INSTALL_PATH)/gh.zip */gh > $(INSTALL_PATH)/gh
-	rm $(INSTALL_PATH)/gh.zip
-	chmod +x $(INSTALL_PATH)/gh
+	@$(CURL) -o - $(DOWNLOAD_URL) > $(INSTALL_PATH)/gh.zip
+	@unzip -p $(INSTALL_PATH)/gh.zip */gh > $(INSTALL_PATH)/gh
+	@rm $(INSTALL_PATH)/gh.zip
+	@chmod +x $(INSTALL_PATH)/gh
 
 install-linux:
-	$(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO */gh > $(INSTALL_PATH)/gh
-	chmod +x $(INSTALL_PATH)/gh
+	@$(CURL) -o - $(DOWNLOAD_URL) | tar --wildcards -zxO */gh > $(INSTALL_PATH)/gh
+	@chmod +x $(INSTALL_PATH)/gh
 
 test:
 	$(PACKAGE_EXE) --version

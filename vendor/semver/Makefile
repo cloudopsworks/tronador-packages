@@ -7,8 +7,8 @@ export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:
-	$(CURL) -o - $(DOWNLOAD_URL) > $(INSTALL_PATH)/semver
-	chmod +x $(INSTALL_PATH)/semver
+	@$(CURL) -o - $(DOWNLOAD_URL) > $(INSTALL_PATH)/semver
+	@chmod +x $(INSTALL_PATH)/semver
 	@exit 0
 
 test:
