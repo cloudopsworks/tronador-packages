@@ -5,6 +5,7 @@ include ../../tasks/Makefile.apk
 export VENDOR ?= cloudopsworks
 export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(OS)_$(ARCH)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
+export SEMVER ?= $(INSTALL_PATH)/semver
 
 install:
 	@$(CURL) -o - $(DOWNLOAD_URL) > $(INSTALL_PATH)/semver
