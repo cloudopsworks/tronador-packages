@@ -13,7 +13,6 @@ EXTENSION=tar.gz
 export VENDOR ?= gittools
 export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(OS_TEXT)-$(ARCH)-$(PACKAGE_VERSION).$(EXTENSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
-export GITVERSION ?= $(INSTALL_PATH)/gitversion
 
 install: install-$(OS)
 	@exit 0

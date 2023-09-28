@@ -14,7 +14,6 @@ export PACKAGE_REPO_URL=https://github.com/cli/cli
 export VENDOR ?= cli
 export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(OS_TEXT)_$(ARCH).$(EXTENSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
-export GH ?= $(INSTALL_PATH)/gh
 
 install: install-$(OS)
 	@exit 0
