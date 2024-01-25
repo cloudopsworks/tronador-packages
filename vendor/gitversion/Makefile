@@ -5,13 +5,17 @@ ifeq ($(OS), darwin)
 	OS_TEXT=osx
 else
 	OS_TEXT=$(OS)
-	ARCH=x64
+endif
+ifeq ($(OS_ARCH),x86_64)
+	OS_ARCH_TEXT=x86
+else
+	OS_ARCH_TEXT=$(OS_ARCH)
 endif
 EXTENSION=tar.gz
 
 # Package details
 export VENDOR ?= gittools
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(OS_TEXT)-$(ARCH)-$(PACKAGE_VERSION).$(EXTENSION)
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/$(PACKAGE_VERSION)/$(PACKAGE_NAME)-$(OS_TEXT)-$(OS_ARCH_TEXT)-$(PACKAGE_VERSION).$(EXTENSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install: install-$(OS)
