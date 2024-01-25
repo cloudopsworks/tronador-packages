@@ -7,7 +7,7 @@ else
 	OS_TEXT=$(OS)
 endif
 ifeq ($(OS_ARCH),x86_64)
-	OS_ARCH_TEXT=x86
+	OS_ARCH_TEXT=x64
 else
 	OS_ARCH_TEXT=$(OS_ARCH)
 endif
