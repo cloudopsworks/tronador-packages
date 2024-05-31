@@ -11,7 +11,7 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 install:
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip $(DOWNLOAD_URL)
-	unzip -d $(TMP)/$(PACKAGE_NAME) $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip
+	unzip -q -u -d $(TMP)/$(PACKAGE_NAME) $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip
 	mv $(TMP)/$(PACKAGE_NAME)/tofu $(INSTALL_PATH)/tofu
 	chmod +x $(INSTALL_PATH)/tofu
 
