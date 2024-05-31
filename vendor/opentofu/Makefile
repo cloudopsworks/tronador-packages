@@ -12,8 +12,8 @@ install:
 	mkdir -p $(TMP)/$(PACKAGE_NAME)
 	$(CURL) -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip $(DOWNLOAD_URL)
 	unzip -d $(TMP)/$(PACKAGE_NAME) $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip
-	mv $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME) $(INSTALL_PATH)/$(PACKAGE_NAME)
-	chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
+	mv $(TMP)/$(PACKAGE_NAME)/tofu $(INSTALL_PATH)/tofu
+	chmod +x $(INSTALL_PATH)/tofu
 
 test:
 	$(PACKAGE_EXE) version
