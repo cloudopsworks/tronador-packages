@@ -1,0 +1,1 @@
+Terragrunt: A wrapper for Terraform that provides extra tools for managing infrastructure as code, promoting DRY configurations, and handling dependencies effectively.
