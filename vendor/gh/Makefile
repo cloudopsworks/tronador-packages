@@ -22,7 +22,7 @@ install: install-$(OS)
 
 install-darwin:
 	@$(CURL) -o - $(DOWNLOAD_URL) > $(INSTALL_PATH)/gh.zip
-	@unzip -o -p $(INSTALL_PATH)/gh.zip */gh > $(INSTALL_PATH)/gh
+	@unzip -p $(INSTALL_PATH)/gh.zip */gh > $(INSTALL_PATH)/gh
 	@rm $(INSTALL_PATH)/gh.zip
 	@chmod +x $(INSTALL_PATH)/gh
 
