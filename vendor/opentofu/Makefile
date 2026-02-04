@@ -8,6 +8,8 @@ export DOWNLOAD_URL ?= https://github.com/opentofu/$(VENDOR)/releases/download/v
 	## Run go generate in all packages
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
+.PHONY: install test
+
 install:
 	@mkdir -p $(TMP)/$(PACKAGE_NAME)
 	@$(CURL) -o $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip $(DOWNLOAD_URL)

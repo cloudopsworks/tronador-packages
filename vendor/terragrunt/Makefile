@@ -8,6 +8,8 @@ export DOWNLOAD_URL ?= https://github.com/gruntwork-io/terragrunt/releases/downl
 	## Run go generate in all packages
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
+.PHONY: install test
+
 install:
 	$(call download_binary)
 

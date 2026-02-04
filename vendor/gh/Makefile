@@ -15,6 +15,8 @@ export VENDOR ?= cli
 export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(OS_TEXT)_$(ARCH).$(EXTENSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
+.PHONY: install install-darwin install-linux test
+
 install: install-$(OS)
 	@exit 0
 
