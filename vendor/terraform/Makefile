@@ -10,7 +10,7 @@ export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 install:
 	@mkdir -p $(TMP)/$(PACKAGE_NAME)
 	@$(CURL) -o $(TMP)/$(PACKAGE_NAME)/terraform.zip $(DOWNLOAD_URL)
-	@unzip -y -d $(TMP)/$(PACKAGE_NAME) $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip
+	@unzip -o -d $(TMP)/$(PACKAGE_NAME) $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME).zip
 	@mv $(TMP)/$(PACKAGE_NAME)/$(PACKAGE_NAME) $(INSTALL_PATH)/$(PACKAGE_NAME)
 	@chmod +x $(INSTALL_PATH)/$(PACKAGE_NAME)
 

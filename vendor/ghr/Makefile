@@ -17,7 +17,7 @@ install: install-$(OS)
 
 install-darwin:
 	$(CURL) -o - $(DOWNLOAD_URL) > $(INSTALL_PATH)/ghr.zip
-	unzip -y -p $(INSTALL_PATH)/ghr.zip */ghr > $(INSTALL_PATH)/ghr
+	unzip -o -p $(INSTALL_PATH)/ghr.zip */ghr > $(INSTALL_PATH)/ghr
 	rm $(INSTALL_PATH)/ghr.zip
 	chmod +x $(INSTALL_PATH)/ghr
 
