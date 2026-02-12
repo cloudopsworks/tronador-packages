@@ -6,8 +6,11 @@ ifeq ($(OS), darwin)
 else
 	OS_TEXT=$(OS)
 endif
+# Map architecture names to match GitVersion release naming
 ifeq ($(OS_ARCH),x86_64)
 	OS_ARCH_TEXT=x64
+else ifeq ($(OS_ARCH),aarch64)
+	OS_ARCH_TEXT=arm64
 else
 	OS_ARCH_TEXT=$(OS_ARCH)
 endif
