@@ -9,10 +9,22 @@ else
 	EXTENSION=tar.gz
 endif
 
+# Map architecture names to match GitHub CLI release naming (Linux only)
+ifeq ($(OS_TEXT),linux)
+	ifeq ($(ARCH),aarch64)
+		ARCH_TEXT=arm64
+	else
+		ARCH_TEXT=$(ARCH)
+	endif
+else
+	ARCH_TEXT=$(ARCH)
+endif
+
 # Package details
 export PACKAGE_REPO_URL=https://github.com/cli/cli
 export VENDOR ?= cli
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(OS_TEXT)_$(ARCH).$(EXTENSION)
+# Use ARCH_TEXT for URL construction to handle ARM64 mapping
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(PACKAGE_VERSION)_$(OS_TEXT)_$(ARCH_TEXT).$(EXTENSION)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 .PHONY: install install-darwin install-linux test
