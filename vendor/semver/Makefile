@@ -1,9 +1,17 @@
 include ../../tasks/Makefile.package
 include ../../tasks/Makefile.apk
 
+# Map architecture names to match semver release naming
+ifeq ($(ARCH),aarch64)
+	ARCH_TEXT=arm64
+else
+	ARCH_TEXT=$(ARCH)
+endif
+
 # Package details
 export VENDOR ?= cloudopsworks
-export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(OS)_$(ARCH)
+# Use ARCH_TEXT for URL construction to handle ARM64 mapping
+export DOWNLOAD_URL ?= $(PACKAGE_REPO_URL)/releases/download/v$(PACKAGE_VERSION)/$(PACKAGE_NAME)_$(OS)_$(ARCH_TEXT)
 export APK_BUILD_TEMPLATE ?= APKBUILD.github-binary
 
 install:
